@@ -2,45 +2,66 @@
 
 [ext_resource type="Script" uid="uid://bp2qhar82v88l" path="res://calculator.gd" id="1_kvxsv"]
 
-[node name="Calculator" type="Node"]
+[node name="Calculator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 131.0
+offset_top = 89.0
+offset_right = 131.0
+offset_bottom = 89.0
 script = ExtResource("1_kvxsv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="미니계산기" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "미니계산기"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="AInput" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+placeholder_text = "A"
+keep_editing_on_text_submit = true
 
 [node name="BInput" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+placeholder_text = "B"
+keep_editing_on_text_submit = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="AddBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="AddBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+text = "+"
 
-[node name="SubBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="SubBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+text = "-"
 
-[node name="MulBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="MulBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+text = "x"
 
-[node name="DivBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="DivBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+text = "÷"
 
-[node name="ClearBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="ClearBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+text = "Clear"
 
 [node name="ResultLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
